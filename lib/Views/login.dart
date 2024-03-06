@@ -1,9 +1,9 @@
 import 'dart:io';
 import 'dart:ui';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
+// import 'package:flutter/services.dart';
+// import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -31,7 +31,10 @@ class _LoginState extends State<Login> {
 
             CircleAvatar(
               backgroundColor: Colors.teal,
-             radius: 30,
+              radius: 30,
+              backgroundImage: selectedImage != null
+                  ? FileImage(selectedImage!) as ImageProvider<Object>?
+                  : AssetImage('assets/images/default_avatar.jpg'),
             ),
 
             InkWell(
